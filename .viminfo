@@ -15,11 +15,11 @@ $
 
 # Command Line History (newest to oldest):
 :q
+:w
 :w README.md
 :PluginList
 :wq
 :PluginInstall
-:w
 :Plugins
 :color
 :colors
@@ -51,62 +51,64 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	" 
-"1	LINE	0
-		g# - Word under cursor - backward (unbounded)
-		n  - Next result, forward
+"0	CHAR	0
+	no <down> <Nop>
+	no <left> <Nop>
+	no <right> <Nop>
+	no <up> <Nop>
+	
+""1	LINE	0
+	" "
 "2	LINE	0
-	===
-	Yank. Example
+	" " alternatively, pass a path where Vundle should install plugins
 "3	LINE	0
-	Yank
+	" "call vundle#begin('~/some/path/here')
 "4	LINE	0
-	g
+	" " The following are examples of different formats supported.
 "5	LINE	0
-	
+	" Plugin 'tpope/vim-fugitive  '
 "6	LINE	0
-	}
+	" " Keep Plugin commands between vundle#begin/end.
 "7	LINE	0
-	
+	"
 "8	LINE	0
-	{
+	" " git repos on your local machine (i.e. when working on your own plugin)
 "9	LINE	0
-	if(something)
+	" Plugin 'user/L9', {'name': 'newL9'}
 "w	CHAR	0
 	
-""-	CHAR	0
-	"
+"-	CHAR	0
+	o
 
 # File marks:
-'0  1  50  ~/README.md
-'1  61  10  /var/www/html/application/basic/controllers/InfoController.php
-'2  15  24  ~/.vimrc
-'3  51  12  ~/.vimrc
-'4  39  0  ~/.vimrc
-'5  33  0  ~/vim-classes/expert-1.md
-'6  85  1  ~/vim-classes/beginner.md
-'7  91  36  ~/vim-classes/beginner.md
-'8  177  0  ~/.viminfo
-'9  1  0  ~/.vim
+'0  47  0  ~/.vimrc
+'1  1  50  ~/README.md
+'2  61  10  /var/www/html/application/basic/controllers/InfoController.php
+'3  11  24  ~/.vimrc
+'4  38  12  ~/.vimrc
+'5  24  0  ~/.vimrc
+'6  33  0  ~/vim-classes/expert-1.md
+'7  85  1  ~/vim-classes/beginner.md
+'8  91  36  ~/vim-classes/beginner.md
+'9  177  0  ~/.viminfo
 
 # Jumplist (newest first):
+-'  47  0  ~/.vimrc
+-'  11  0  ~/.vimrc
 -'  1  50  ~/README.md
 -'  61  10  /var/www/html/application/basic/controllers/InfoController.php
 -'  1  0  /var/www/html/application/basic/controllers/InfoController.php
--'  15  24  ~/.vimrc
--'  21  1  ~/.vimrc
--'  18  25  ~/.vimrc
--'  46  0  ~/.vimrc
--'  51  0  ~/.vimrc
--'  20  7  ~/.vimrc
--'  39  0  ~/.vimrc
--'  48  0  ~/.vimrc
+-'  15  1  ~/.vimrc
+-'  13  25  ~/.vimrc
+-'  30  0  ~/.vimrc
+-'  38  0  ~/.vimrc
+-'  24  0  ~/.vimrc
+-'  35  0  ~/.vimrc
 -'  33  0  ~/vim-classes/expert-1.md
 -'  1  0  ~/vim-classes/expert-1.md
 -'  85  1  ~/vim-classes/beginner.md
--'  50  3  ~/.vimrc
--'  49  3  ~/.vimrc
+-'  37  3  ~/.vimrc
+-'  36  3  ~/.vimrc
 -'  86  11  ~/vim-classes/beginner.md
 -'  1  0  ~/vim-classes/beginner.md
 -'  5  0  ~/vim-classes/beginner.md
@@ -188,36 +190,59 @@ $
 -'  1  0  /var/www/html/application/countyWithoutPopData.txt
 -'  2  0  /var/www/html/application/script/dbconnect.php
 -'  1  0  /var/www/html/application/script/dbconnect.php
--'  1  0  /var/www/html/run_script.php
 
 # History of marks within files (newest to oldest):
 
-> /var/www/html/application/basic/controllers/InfoController.php
-	"	61	10
-
 > ~/.vimrc
-	"	15	24
-	^	19	25
-	.	19	24
+	"	47	0
+	^	31	0
+	.	31	0
 	+	1	52
-	+	47	2
+	+	32	2
 	+	1	0
-	+	51	1
+	+	38	1
 	+	5	0
 	+	6	0
+	+	7	0
 	+	9	0
+	+	10	0
+	+	11	3
+	+	18	0
+	+	19	0
+	+	15	8
+	+	15	0
+	+	12	28
+	+	12	29
+	+	13	25
+	+	15	0
+	+	14	24
+	+	35	1
+	+	35	15
+	+	36	0
+	+	33	0
+	+	34	23
+	+	39	0
+	+	43	0
+	+	39	0
+	+	40	0
+	+	41	0
+	+	42	0
+	+	43	0
+	+	44	0
+	+	45	0
+	+	46	0
+	+	15	0
+	+	15	0
+	+	16	0
 	+	11	0
 	+	12	0
-	+	15	3
-	+	33	0
-	+	34	0
-	+	20	8
-	+	20	0
-	+	16	28
-	+	17	29
-	+	18	25
-	+	21	0
-	+	19	24
+	+	11	0
+	+	7	0
+	+	30	0
+	+	31	0
+
+> /var/www/html/application/basic/controllers/InfoController.php
+	"	61	10
 
 > ~/vim-classes/expert-1.md
 	"	33	0
