@@ -12,7 +12,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'Juleswang/css.vim'
 Plugin 'othree/html5.vim' 
-
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomasr/molokai'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,3 +47,7 @@ vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
 
+" default colorscheme "
+colorscheme molokai
+set number
+set tabstop=4 softtabstop=0 noexpandtab shiftwidth=4
